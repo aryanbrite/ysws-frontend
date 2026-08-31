@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+}
+
+header{
+    height: 50vh;
+}
+
+footer{
+    height: 80vh;
+    background-color: pink;
+}
