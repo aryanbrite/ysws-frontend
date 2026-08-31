@@ -282,3 +282,7 @@ input[type="email"]::placeholder {
     width: 45px;
     height: 45px;
 }
+
+img {
+    user-select: none;
+}
