@@ -1,5 +1,8 @@
 body {
-      background-color: #ffc0cb3e;
+       background-color: pink;
+
+    background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px);
+    background-size: 4vw 4vw;
     }
     :root { color-scheme: light; }
     * { box-sizing: border-box; }
