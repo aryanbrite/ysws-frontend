@@ -262,3 +262,7 @@ input[type="email"]::placeholder {
 #submit:hover {
   background-color: #FFF8ED;
 }
+
+img {
+  user-select: none;
+}
