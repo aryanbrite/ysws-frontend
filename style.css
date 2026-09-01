@@ -198,6 +198,14 @@ input[type="email"] {
     border: 1px solid #00000077;
     padding-right: 5%;
 }
+
+
+
+input[type="email"]:hover{
+    background-color: #FFF8ED;
+
+}
+
 button[type="submit"] {
     width: 150px;
     height: 50px;
@@ -247,42 +255,10 @@ input[type="email"]::placeholder {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0;
 
     vertical-align: top;
-
-    transition: 0.3s;
-}
-
-#submit img {
-    width: 0;
-    height: 0;
-    object-fit: cover;
-    transition: 0.3s;
 }
 
 #submit:hover {
-    gap: 8px;
-}
-
-#submit:hover img {
-    width: 25px;
-    height: 25px;
-}
-
-
-#submit img {
-    width: 0;
-    height: 0;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-#submit:hover img {
-    width: 45px;
-    height: 45px;
-}
-
-img {
-    user-select: none;
+  background-color: #FFF8ED;
 }
