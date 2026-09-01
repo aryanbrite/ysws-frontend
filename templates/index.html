@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cherry - Hack Club</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='style.css') }} ">
     <link rel="shortcut icon" href="https://cdn.hackclub.com/01a058a2-8bbb-788a-83a1-24d4ccc8391e/Untitled%20design%20(31).png" type="image/x-icon">
-    <script src="script.js" defer ></script>
+    <script src="{{ url_for('static', filename='sctipt.js') }}" defer ></script>
       <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" 
         integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
         crossorigin="anonymous"></script>
