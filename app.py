@@ -13,11 +13,12 @@ resend.api_key = os.environ["RESEND_API_KEY"]
 def home():
     if request.method == "POST":
         mail = request.form.get("email")
+        emailhtml = render_template("email.html")
         params: resend.Emails.SendParams = {
             "from": "Aryan <i@aryan.my>",
             "to": [mail],
-            "subject": "hello world",
-            "html": "<strong>it works!</strong>",
+            "subject": "this is subject",
+            "html": emailhtml,
         }
 
         try:
