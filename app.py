@@ -15,7 +15,7 @@ def home():
         mail = request.form.get("email")
         emailhtml = render_template("email.html")
         params: resend.Emails.SendParams = {
-            "from": "Aryan <i@aryan.my>",
+            "from": "Pranjal <pranjal.hackclub@aryan.my>",
             "to": [mail],
             "subject": "this is subject",
             "html": emailhtml,
