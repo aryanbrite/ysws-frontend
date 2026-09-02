@@ -8,11 +8,12 @@ body {
     * { box-sizing: border-box; }
     html, body { width: 100%; height: 100%; margin: 0; }
     body {
-      overflow: hidden;
+      overflow-x: hidden;
+  overflow-y: auto;
       font-family: system-ui, sans-serif;
     }
     .petal-field {
-      position: fixed;
+      position: absolute;
       inset: 0;
       overflow: hidden;
       pointer-events: none;
@@ -57,7 +58,7 @@ body {
 header {
     background-color: #ffb7c5;
     height: 10vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 70%;
@@ -92,7 +93,7 @@ header {
 }
 
 #tree {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     right: 0px;
     width: 35vw;
@@ -106,7 +107,7 @@ header {
 
 
 #tree2 {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     transition: 0.7s;
@@ -135,7 +136,7 @@ header {
 
 
 #tex {
-  position: fixed;
+  position: absolute;
   top: 11vh;
   right: 16vw;
   height: 30%;
@@ -158,7 +159,7 @@ body::selection {
     height: 20vh;
     width: 40vw;
     background-color: #fff6c9;
-    position: fixed;
+    position: absolute;
     bottom: 20vh;
     left: 10vh;
     border-radius: 16px;
@@ -170,7 +171,7 @@ body::selection {
     height: 20vh;
     width: 40vw;
     background-color: white;
-    position: fixed;
+    position: absolute;
     bottom: 18vh;
     left: 11vh;
     border-radius: 16px;
@@ -266,4 +267,8 @@ input[type="email"]::placeholder {
 img {
   user-select: none;
 
+}
+
+.hero {
+  height: 200vh;
 }
