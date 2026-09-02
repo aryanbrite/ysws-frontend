@@ -59,7 +59,7 @@ header {
   z-index: 100;
     background-color: #ffb7c5;
     height: 10vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 70%;
@@ -272,5 +272,7 @@ img {
 }
 
 .hero {
-  height: 200vh;
+  height: 150vh;
 }
+
+
