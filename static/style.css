@@ -56,9 +56,10 @@ body {
     }
 
 header {
+  z-index: 100;
     background-color: #ffb7c5;
     height: 10vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 70%;
@@ -107,6 +108,7 @@ header {
 
 
 #tree2 {
+  z-index: 101;
     position: absolute;
     top: 0px;
     left: 0px;
