@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry - Hack Club</title>
+    <link rel="shortcut icon" href="https://cdn.hackclub.com/01a058a2-8bbb-788a-83a1-24d4ccc8391e/Untitled%20design%20(31).png" type="image/x-icon">
+
+
+
+
+    {% block head %}{% endblock %}
+    <style>
+    @font-face {
+    font-family: "MyFont";
+    src: url("font.ttf") format("truetype");
+}
+    text,p,h1,h2,h3,button,input[type="email"]::placeholder {
+  font-family: "MyFont", sans-serif;
+        ð
+    }
+
+    </style>
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>
