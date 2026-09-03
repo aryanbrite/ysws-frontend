@@ -29,4 +29,7 @@ def home():
         
     return render_template("index.html")
 
+@app.route("/email")
+def email():
+    return render_template("email.html")
 
