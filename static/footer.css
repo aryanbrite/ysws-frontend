@@ -73,7 +73,7 @@
 .brand {
     position: absolute;
     bottom: -10vh;
-    right: -20vw;
+    right: 3vw;
   display: inline-block;
   width: max-content;
   margin: 0 0 32px;
@@ -229,4 +229,14 @@
 
 body {
   margin: 0;
+}
+
+footer text,
+footer p,
+footer h1,
+footer h2,
+footer h3,
+footer button,
+footer input[type="email"]::placeholder {
+    font-family: "MyFont", sans-serif !important;
 }

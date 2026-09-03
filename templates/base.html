@@ -11,6 +11,17 @@
           href="{{ url_for('static', filename='footer.css') }}">
 
     {% block head %}{% endblock %}
+    <style>
+    @font-face {
+    font-family: "MyFont";
+    src: url("font.ttf") format("truetype");
+}
+    text,p,h1,h2,h3,button,input[type="email"]::placeholder {
+  font-family: "MyFont", sans-serif;
+        ð
+    }
+
+    </style>
 </head>
 <body>
     {% block content %}{% endblock %}
