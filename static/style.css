@@ -100,6 +100,7 @@ header {
     width: 35vw;
     transition: 0.7s;
     pointer-events: visiblePainted;
+    animation: treeani 2s;
 }
 
 #tree:hover {
@@ -114,7 +115,22 @@ header {
     left: 0px;
     transition: 0.7s;
     width: 60vw;
+    animation: tree2ani 2s;
 }
+
+
+@keyframes tree2ani {
+  from {
+    top: -30vh;
+    left: -30vw;
+  }
+}
+@keyframes treeani {
+  from {
+    right: -30vw;
+  }
+}
+
 
 
 #tree2:hover {
