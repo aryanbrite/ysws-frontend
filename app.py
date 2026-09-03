@@ -81,3 +81,6 @@ def logout():
     return redirect(url_for("home"))
 
 
+@app.errorhandler(404)
+def notfounderror(error):
+    return render_template("404_error.html")
