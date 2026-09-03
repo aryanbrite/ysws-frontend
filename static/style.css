@@ -100,7 +100,7 @@ header {
     width: 35vw;
     transition: 0.7s;
     pointer-events: visiblePainted;
-    animation: treeani 2s;
+    animation: treeani 1.8s;
 }
 
 #tree:hover {
