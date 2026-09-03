@@ -29,18 +29,13 @@ def home():
 def email():
     return render_template("email.html", name = session.get("user")["first_name"] )
 
-@app.route("/login")
-def login():
-    url = (f"https://auth.hackclub.com/oauth/authorize?client_id={HACKCLUB_CLIENT_ID}&redirect_uri=http://127.0.0.1:5000/oauth/callback&response_type=code&scope=openid%20email%20name%20profile%20verification_status%20slack_id")
-    return redirect(url)
-
 @app.route("/oauth/callback")
 def oauth_callback():
     code = request.args.get("code")
     resp = requests.post("https://auth.hackclub.com/oauth/token", data = {
         "code":code,
         "grant_type": "authorization_code",
-        "redirect_uri": "http://127.0.0.1:5000/oauth/callback",
+        "redirect_uri": REDIRECT_URL,
         "client_id": HACKCLUB_CLIENT_ID,
         "client_secret": HACKCLUB_CLIENT_SECRET
     } )
