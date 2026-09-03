@@ -3,15 +3,23 @@ import resend
 from resend.exceptions import ResendError
 import os
 import requests
+from flask_sqlalchemy import SQLAlchemy
+from error import error
 
 app = Flask(__name__)
 app.secret_key = os.environ["YUBIKEY"]
+
 
 resend.api_key = os.environ["RESEND_API_KEY"]
 HACKCLUB_CLIENT_ID = os.environ["HACKCLUB_CLIENT_ID"]
 HACKCLUB_CLIENT_SECRET = os.environ["HACKCLUB_CLIENT_SECRET"]
 REDIRECT_URL = os.environ["REDIRECT_URL"]
 
+
+
+# App reg
+
+app.register_blueprint(error)
 
 
 @app.route("/", methods = ["POST", "GET"])
@@ -81,6 +89,3 @@ def logout():
     return redirect(url_for("home"))
 
 
-@app.errorhandler(404)
-def notfounderror(error):
-    return render_template("404_error.html")
