@@ -219,6 +219,11 @@ button[type="submit"] {
     border-radius: 7px;
 }
 
+button[type="submit"]:hover{
+  cursor: pointer;
+}
+
+
 h1,h2,h3,p, button{
   font-family: "MyFont", sans-serif;
 
