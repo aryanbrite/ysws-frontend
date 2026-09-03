@@ -276,3 +276,35 @@ img {
 }
 
 
+.logo {
+    position: fixed;
+    top: 1vh;
+    right: 2vw;
+
+    width: 12vw;
+    height: auto;
+
+    display: block;
+    line-height: 0;
+
+    z-index: 1000;
+}
+
+.logo svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.logo svg path {
+    pointer-events: visiblePainted;
+}
+
+.logo svg g {
+    pointer-events: visiblePainted;
+}
+
+.logo svg g path {
+    pointer-events: visiblePainted;
+}
