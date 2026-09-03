@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, url_for
 import resend
 from resend.exceptions import ResendError
 import os
@@ -17,7 +17,8 @@ HACKCLUB_CLIENT_SECRET = os.environ["HACKCLUB_CLIENT_SECRET"]
 def home():
     if request.method == "POST":
         mail = request.form.get("email")
-        emailhtml = render_template("email.html")
+        redirect(url_for("login"))
+        emailhtml = render_template("email.html", name = session.get("user")["first_name"] )
         params: resend.Emails.SendParams = {
             "from": "Pranjal <pranjal.hackclub@aryan.my>",
             "to": [mail],
@@ -35,7 +36,7 @@ def home():
 
 @app.route("/email")
 def email():
-    return render_template("email.html")
+    return render_template("email.html", name = session.get("user")["first_name"] )
 
 @app.route("/login")
 def login():

@@ -8,13 +8,13 @@
     <link rel="stylesheet" href=" {{ url_for('static', filename='email.css') }} ">
 </head>
 <body>
-    <p>Hey [name]! Pranjal here, Welcome to CHERRY!!! <br> <br>
+    <p>Hey {{name}}! Pranjal here, Welcome to CHERRY!!! <br> <br>
     You just signed up for Cherry so let me give you a brief intro about it and tell you what comes next! <br>
     Cherry is a You Ship, We Serve (YSWS) Program by Hack Club where if you code or lapse, and ship 50 hours of projects, you'll be invited to Tokyo, Japan for a 5 day hackathon with a bunch of other Hack Clubbers! <br> <br> 
-    [If age not verified]
+    {% if session.get("user")["verification_status"] != "verified" %}
         <strong>I can see that you have not verified your age right now but no problems! Here's the [link] to the verification page. <br>
         You must be 18 years old or younger in order to participate (it's for high school students).</strong> <br> <br>
-    [If close]
+    {% endif %}
     We have no cap on participation. If you ship 50 hours worth of projects, you are guaranteed to have a spot. Accommodation and food will be totally covered by us. 
     You can also buy your flight stipends from the Event Shop in exchange for more hours! <br> <br>
     Your next step is to build your first project. [Click here] for the complete guide! <br> <br>
