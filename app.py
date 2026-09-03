@@ -16,21 +16,11 @@ HACKCLUB_CLIENT_SECRET = os.environ["HACKCLUB_CLIENT_SECRET"]
 @app.route("/", methods = ["POST", "GET"])
 def home():
     if request.method == "POST":
-        mail = request.form.get("email")
-        redirect(url_for("login"))
-        emailhtml = render_template("email.html", name = session.get("user")["first_name"] )
-        params: resend.Emails.SendParams = {
-            "from": "Pranjal <pranjal.hackclub@aryan.my>",
-            "to": [mail],
-            "subject": "this is subject",
-            "html": emailhtml,
-        }
-
-        try:
-            email = resend.Emails.send(params)
-            return email
-        except ResendError as error:
-            return error
+        session["mail"] = request.form.get("email")
+        url = (f"https://auth.hackclub.com/oauth/authorize?client_id={HACKCLUB_CLIENT_ID}&redirect_uri=http://127.0.0.1:5000/oauth/callback&response_type=code&scope=openid%20email%20name%20profile%20verification_status%20slack_id")
+        return redirect(url)
+        
+        
         
     return render_template("index.html")
 
@@ -62,4 +52,18 @@ def oauth_callback():
     dataauth = requests.get("https://auth.hackclub.com/api/v1/me", headers=headers)
 
     session["user"] = dataauth.json()["identity"]
-    return session["user"]
+    emailhtml = render_template("email.html", name = session.get("user")["first_name"] )
+    params: resend.Emails.SendParams = {
+        "from": "Pranjal <pranjal.hackclub@aryan.my>",
+        "to": [session.get("mail")],
+        "subject": "this is subject",
+        "html": emailhtml,
+    }
+    
+    try:
+        email = resend.Emails.send(params)
+        return email
+    except ResendError as error:
+        return error
+
+
