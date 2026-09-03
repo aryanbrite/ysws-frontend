@@ -16,6 +16,8 @@ REDIRECT_URL = os.environ["REDIRECT_URL"]
 
 @app.route("/", methods = ["POST", "GET"])
 def home():
+    if "user" in session:
+        return redirect(url_for("dashboard"))
     if request.method == "POST":
         session["mail"] = request.form.get("email")
         url = (f"https://auth.hackclub.com/oauth/authorize?client_id={HACKCLUB_CLIENT_ID}&redirect_uri={REDIRECT_URL}&response_type=code&scope=openid%20email%20name%20profile%20verification_status%20slack_id")
@@ -57,8 +59,23 @@ def oauth_callback():
     }
     
     try:
-        email = resend.Emails.send(params)
-        return email
+        email = resend.Emails.send(params) ## error tacking yaha se hogi ispe koi error tracker lagana hai 
+        return redirect(url_for("dashboard"))
     except ResendError as error:
         return error
+
+@app.route("/dashboard", methods = ["POST","GET"])
+def dashboard():
+    if request.method == "POST":
+        return redirect(url_for("logout"))
+
+    return render_template("dashboard.html")
+
+
+
+@app.route("/logout", methods=["POST"] )
+def logout():
+    session.clear()
+    return redirect(url_for("home"))
+
 
