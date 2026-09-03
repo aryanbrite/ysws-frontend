@@ -28,7 +28,7 @@ def home():
         return redirect(url_for("dashboard"))
     if request.method == "POST":
         session["mail"] = request.form.get("email")
-        url = (f"https://auth.hackclub.com/oauth/authorize?client_id={HACKCLUB_CLIENT_ID}&redirect_uri={REDIRECT_URL}&response_type=code&scope=openid%20email%20name%20profile%20verification_status%20slack_id")
+        url = (f"https://auth.hackclub.com/oauth/authorize?client_id={HACKCLUB_CLIENT_ID}&redirect_uri={REDIRECT_URL}&response_type=code&scope=openid%20email%20name%20profile%20verification_status%20slack_id&login_hint={session["mail"]}")
         return redirect(url)
         
         
