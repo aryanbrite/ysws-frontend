@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry - Hack Club</title>
+    <link rel="shortcut icon" href="https://cdn.hackclub.com/01a058a2-8bbb-788a-83a1-24d4ccc8391e/Untitled%20design%20(31).png" type="image/x-icon">
+
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='footer.css') }}">
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    {% include '_footer.html' %}
+
+    <script src="{{ url_for('static', filename='footer.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

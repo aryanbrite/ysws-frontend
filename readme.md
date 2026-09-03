@@ -1,0 +1,1 @@
+contribute if you want its not very hard just git clone this but please dont use AI to write even a single nit of code
