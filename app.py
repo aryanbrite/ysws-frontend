@@ -66,10 +66,12 @@ def oauth_callback():
 
 @app.route("/dashboard", methods = ["POST","GET"])
 def dashboard():
-    if request.method == "POST":
-        return redirect(url_for("logout"))
-
-    return render_template("dashboard.html")
+    if "user" in session:
+        if request.method == "POST":
+                return redirect(url_for("logout"))
+        return render_template("dashboard.html")
+    else:
+        return redirect(url_for("home"))
 
 
 
