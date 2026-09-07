@@ -119,8 +119,8 @@ header {
 
 #tree {
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0vh;
+    right: -10vh;
     width: 35vw;
     transition: 0.7s;
     pointer-events: visiblePainted;
@@ -135,8 +135,8 @@ header {
 #tree2 {
   z-index: 101;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: -10vh;
+    left: -15vh;
     transition: 0.7s;
     width: 60vw;
     animation: tree2ani 2s;
