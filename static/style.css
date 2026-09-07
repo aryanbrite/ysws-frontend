@@ -206,6 +206,8 @@ body::selection {
     left: 10vh;
     border-radius: 16px;
     z-index: 5;
+    border: 1px solid pink;
+
 }
 
 /* White shadow */
@@ -219,6 +221,7 @@ body::selection {
     border-radius: 16px;
     z-index: 4;
     transition: 0.3s;
+    border: 1px solid pink;
 }
 
 /* Hover yellow card -> move white shadow */
