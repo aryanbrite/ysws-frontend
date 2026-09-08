@@ -31,11 +31,12 @@
   position: absolute;
   z-index: 0;
   right: 0;
-  top: 0;
+  top: -19vh;
   width: clamp(340px, 48vw, 680px);
   height: auto;
   transform: translateY(-40.5%);
   pointer-events: none;
+  border-bottom-left-radius: 10vh;
 }
 
 .footer-art-dark,
