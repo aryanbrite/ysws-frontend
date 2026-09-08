@@ -556,3 +556,18 @@ input[type="email"]:focus,
 #submit:focus {
     outline: none;
 }
+
+    html {
+    scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+#text {
+    color: #FFF8ED;
+
+    text-shadow:
+        0 0 3px #ffffff,
+        0 0 45px rgba(236, 55, 80, 0.45);
+}
