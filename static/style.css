@@ -490,4 +490,23 @@ img {
 }
 .empty {
   height: 50vh;
+  position: relative;
 }
+
+#lamp {
+  height: 300px;
+  position: absolute;
+  top: 0px;
+  left: 10vw;
+}
+
+#ump {
+  width: 30vw ;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%) translateX(50%);
+  z-index: 1000;
+}
+
+#
