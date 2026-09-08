@@ -68,7 +68,7 @@ header {
 
     border: 1px solid transparent;
     background:
-        linear-gradient(#FFF8ED, #FFF8ED) padding-box,
+        linear-gradient(#ec3750, #ec3750) padding-box,
         linear-gradient(
             120deg,
             #b8860b,
@@ -144,7 +144,7 @@ header {
   text-size-adjust: 20vw;
   font-size: 10vw;
   font-family: "MyFont", sans-serif;
-  color: #ec3750;
+  color: #FFF8ED;
 }
 
 @font-face {
@@ -254,6 +254,7 @@ input[type="email"]::placeholder {
   top: -100%;
   left: 3%;
   font-weight: 400;
+  color: white;
 }
 
 #weare {
@@ -261,10 +262,19 @@ input[type="email"]::placeholder {
   bottom: 6vh;
   left: 6vw;
   font-size: large;
-  background-color: white;
-  color: pink;
+  color: black;
 }
 
+.yell {
+  background-color: red;
+  color: white;
+  font-size: 25px;
+}
+
+.white {
+  font-size: 25px;
+  background-color: white;
+}
 
 
 #submit {
