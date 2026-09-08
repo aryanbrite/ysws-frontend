@@ -489,14 +489,14 @@ img {
   .pmq__card:hover img { transform: none; }
 }
 .empty {
-  height: 50vh;
+  height: 90vh;
   position: relative;
 }
 
 #lamp {
   height: 300px;
   position: absolute;
-  top: 0px;
+  top: 25%;
   left: 10vw;
 }
 
