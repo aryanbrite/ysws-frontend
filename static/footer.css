@@ -39,6 +39,18 @@
   border-bottom-left-radius: 10vh;
 }
 
+.kittens {
+  position: absolute;
+  z-index: 0;
+  left: 10px;
+  top: -8vh;
+  width: clamp(340px, 30vw, 680px);
+  height: auto;
+  transform: translateY(-40.5%);
+  pointer-events: none;
+  border-bottom-left-radius: 10vh;
+}
+
 .footer-art-dark,
 .footer-art-light + .footer-art-dark,
 .theme-toggle {
