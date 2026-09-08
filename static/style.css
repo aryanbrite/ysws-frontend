@@ -382,7 +382,7 @@ img {
 .pmq__row {
   position: absolute;
   left: 50%;
-  width: 170%;          /* wide enough that the tilted ends clear the frame */
+  width: 100%;          /* keeps the duplicated track longer than the frame */
   display: flex;
 }
 
