@@ -1,41 +1,17 @@
 body {
-  background-color: #fff7f9;
-  background-image:
-    /* tiny paper grain */
-    radial-gradient(circle at 20% 30%, rgba(120, 70, 80, 0.035) 0 0.7px, transparent 0.8px),
-    radial-gradient(circle at 80% 70%, rgba(120, 70, 80, 0.03) 0 0.6px, transparent 0.7px),
+      background-color: pink;
 
-    /* scattered sakura petals */
-    radial-gradient(ellipse 7px 11px at 8% 18%, rgba(245, 166, 183, 0.55) 0 45%, transparent 48%),
-    radial-gradient(ellipse 5px 9px at 18% 72%, rgba(239, 145, 168, 0.42) 0 45%, transparent 48%),
-    radial-gradient(ellipse 6px 10px at 31% 27%, rgba(250, 181, 196, 0.48) 0 45%, transparent 48%),
-    radial-gradient(ellipse 4px 8px at 43% 84%, rgba(235, 139, 163, 0.38) 0 45%, transparent 48%),
-    radial-gradient(ellipse 7px 11px at 57% 14%, rgba(247, 174, 190, 0.45) 0 45%, transparent 48%),
-    radial-gradient(ellipse 5px 9px at 69% 63%, rgba(239, 151, 173, 0.4) 0 45%, transparent 48%),
-    radial-gradient(ellipse 7px 10px at 82% 24%, rgba(248, 178, 194, 0.5) 0 45%, transparent 48%),
-    radial-gradient(ellipse 5px 8px at 94% 78%, rgba(235, 145, 166, 0.4) 0 45%, transparent 48%),
-
-    /* soft washi paper washes */
-    radial-gradient(circle at 5% 0%, rgba(255, 214, 224, 0.7), transparent 32%),
-    radial-gradient(circle at 100% 100%, rgba(255, 220, 228, 0.65), transparent 35%),
-    linear-gradient(115deg, #fff8fa 0%, #fff3f6 48%, #fff8fa 100%);
-
-  background-size:
-    17px 17px,
-    23px 23px,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%;
-
-  background-attachment: fixed;
-}
+    background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px);
+    background-size: 4vw 4vw;
+    }
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; }
+    body {
+      overflow-x: hidden;
+  overflow-y: auto;
+      font-family: system-ui, sans-serif;
+    }
     .petal-field {
       position: absolute;
       inset: 0;
@@ -86,7 +62,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 80%;
+    width: 70%;
     border-radius: 0px 0 0 30px;
     box-sizing: border-box;
 
@@ -119,8 +95,8 @@ header {
 
 #tree {
     position: absolute;
-    bottom: 0vh;
-    right: -10vh;
+    bottom: 0px;
+    right: 0px;
     width: 35vw;
     transition: 0.7s;
     pointer-events: visiblePainted;
@@ -135,8 +111,8 @@ header {
 #tree2 {
   z-index: 101;
     position: absolute;
-    top: -10vh;
-    left: -15vh;
+    top: 0px;
+    left: 0px;
     transition: 0.7s;
     width: 60vw;
     animation: tree2ani 2s;
@@ -168,7 +144,7 @@ header {
   text-size-adjust: 20vw;
   font-size: 10vw;
   font-family: "MyFont", sans-serif;
-  color:pink ;
+  color: white;
 }
 
 @font-face {
@@ -206,8 +182,6 @@ body::selection {
     left: 10vh;
     border-radius: 16px;
     z-index: 5;
-    border: 1px solid pink;
-
 }
 
 /* White shadow */
@@ -221,7 +195,6 @@ body::selection {
     border-radius: 16px;
     z-index: 4;
     transition: 0.3s;
-    border: 1px solid pink;
 }
 
 /* Hover yellow card -> move white shadow */
@@ -288,7 +261,8 @@ input[type="email"]::placeholder {
   bottom: 6vh;
   left: 6vw;
   font-size: large;
-  color: black;
+  background-color: white;
+  color: pink;
 }
 
 
