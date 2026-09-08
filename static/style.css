@@ -288,7 +288,7 @@ input[type="email"]::placeholder {
 }
 
 .yell {
-  background-color: red;
+  background-color: #ec3750 ;
   color: white;
   font-size: 25px;
 }
