@@ -205,7 +205,7 @@ body::selection {
     position: absolute;
     bottom: 20.5vh;
     left: 11vh;
-    border: 2px solid white;
+    border: 2px solid #FFF8ED;
     border-radius: 16px;
     z-index: 10;
     user-select: none;
