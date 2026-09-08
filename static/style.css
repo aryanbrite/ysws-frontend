@@ -62,13 +62,13 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 70%;
+    width: 17%;
     border-radius: 0px 0 0 30px;
     box-sizing: border-box;
 
     border: 1px solid transparent;
     background:
-        linear-gradient(#fff6c9, #fff6c9) padding-box,
+        linear-gradient(#FFF8ED, #FFF8ED) padding-box,
         linear-gradient(
             120deg,
             #b8860b,
@@ -144,7 +144,7 @@ header {
   text-size-adjust: 20vw;
   font-size: 10vw;
   font-family: "MyFont", sans-serif;
-  color: white;
+  color: #ec3750;
 }
 
 @font-face {
@@ -176,7 +176,7 @@ body::selection {
 .signup {
     height: 20vh;
     width: 40vw;
-    background-color: #fff6c9;
+    background-color: #ec3750;
     position: absolute;
     bottom: 20vh;
     left: 10vh;
@@ -188,7 +188,7 @@ body::selection {
 .signup1 {
     height: 20vh;
     width: 40vw;
-    background-color: white;
+    background-color: #FFF8ED;
     position: absolute;
     bottom: 18vh;
     left: 11vh;
