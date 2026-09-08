@@ -550,3 +550,9 @@ img {
     transform: translateY(-50%) translateX(50%) rotate(-360deg);
   }
 }
+
+
+input[type="email"]:focus,
+#submit:focus {
+    outline: none;
+}
