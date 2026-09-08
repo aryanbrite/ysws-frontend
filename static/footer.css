@@ -30,9 +30,9 @@
 .footer-art {
   position: absolute;
   z-index: 0;
-  right: 0;
-  top: -19vh;
-  width: clamp(340px, 48vw, 680px);
+  right: -10px;
+  top: 17vh;
+  width: clamp(340px, 30vw, 680px);
   height: auto;
   transform: translateY(-40.5%);
   pointer-events: none;
