@@ -174,6 +174,7 @@ body::selection {
   color: pink;
 }
 
+
 .signup {
     height: 20vh;
     width: 40vw;
@@ -198,6 +199,19 @@ body::selection {
     transition: 0.3s;
 }
 
+.signup3 {
+    height: 19vh;
+    width: 39vw;
+    position: absolute;
+    bottom: 20.5vh;
+    left: 11vh;
+    border: 2px solid white;
+    border-radius: 16px;
+    z-index: 10;
+    user-select: none;
+    pointer-events: none;
+}
+
 /* Hover yellow card -> move white shadow */
 .signup:hover + .signup1 {
     bottom: 18vh;
@@ -217,6 +231,7 @@ input[type="email"] {
     border-radius: 7px;
     border: 1px solid #00000077;
     padding-right: 5%;
+    background-color: #FFF8ED;
     
 }
 
@@ -238,7 +253,7 @@ button[type="submit"] {
     font-size: 18px;
     background-color: white;
     outline: none;
-    border: 1px solid #00000077;
+    border: 1px solid #2a262677;
     border-radius: 7px;
 }
 
@@ -288,7 +303,7 @@ input[type="email"]::placeholder {
     width: 150px;
     height: 50px;
     font-size: 18px;
-    background-color: white;
+    background-color: #FFF8ED;
     outline: none;
     border: 1px solid #00000077;
     border-radius: 7px;
