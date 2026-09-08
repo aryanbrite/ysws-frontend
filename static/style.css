@@ -507,5 +507,14 @@ img {
   right: 0px;
   transform: translateY(-50%) translateX(50%);
   z-index: 1000;
+  animation: circle 20s linear 10ms infinite;
 }
 
+@keyframes circle {
+  from {
+    transform: translateY(-50%) translateX(50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) translateX(50%) rotate(360deg);
+  }
+}
