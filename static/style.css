@@ -217,9 +217,15 @@ input[type="email"] {
     border-radius: 7px;
     border: 1px solid #00000077;
     padding-right: 5%;
+    
 }
 
-
+input[type="email"]:-webkit-autofill,
+input[type="email"]:-webkit-autofill:hover,
+input[type="email"]:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #FFF8ED inset;
+    -webkit-text-fill-color: black;
+}
 
 input[type="email"]:hover{
     background-color: #FFF8ED;
