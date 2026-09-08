@@ -575,4 +575,5 @@ html::-webkit-scrollbar {
 #rail {
   position: absolute;
   top: 31vh;
+  width: 85%;
 }
