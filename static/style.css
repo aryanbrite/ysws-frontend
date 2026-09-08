@@ -293,7 +293,7 @@ img {
 }
 
 .hero {
-  height: 150vh;
+  height: 100vh;
 }
 
 
@@ -342,3 +342,152 @@ img {
   left: 0vw;
 }
 
+/* ==========================================================================
+   Project marquee — two tilted, infinitely scrolling rows of project cards.
+   Fully scoped to .pmq, so it can be dropped into any page.
+   Tweak the variables below; nothing else needs editing.
+   ========================================================================== */
+
+.pmq {
+  /* --- knobs --- */
+  --pmq-card-w: 280px;      /* card width                                    */
+  --pmq-card-h: 190px;      /* card height                                   */
+  --pmq-gap: 18px;          /* space between cards                           */
+  --pmq-speed: 45s;         /* one full loop; larger = slower                */
+  --pmq-tilt: 7deg;         /* row rotation                                  */
+  --pmq-band-h: 650px;      /* height of the whole band                      */
+  --pmq-row-offset: 120px;  /* distance of each row from top / bottom edge   */
+  --pmq-radius: 18px;       /* card corner radius                            */
+  --pmq-fade: 14%;          /* width of the soft fade on each side           */
+
+  position: relative;
+  width: 100%;
+  height: var(--pmq-band-h);
+  overflow: hidden;
+  background: transparent; /* inherits whatever the page background is */
+
+  /* Fades the edges to transparent, so it works on any background colour.
+     If you'd rather fade to a solid colour, delete these two lines and use
+     the ::before / ::after gradients at the bottom of this file instead. */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 var(--pmq-fade), #000 calc(100% - var(--pmq-fade)), transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 var(--pmq-fade), #000 calc(100% - var(--pmq-fade)), transparent 100%);
+}
+
+.pmq *,
+.pmq *::before,
+.pmq *::after { box-sizing: border-box; }
+
+/* --- rows ---------------------------------------------------------------- */
+
+.pmq__row {
+  position: absolute;
+  left: 50%;
+  width: 170%;          /* wide enough that the tilted ends clear the frame */
+  display: flex;
+}
+
+.pmq__row--top {
+  top: var(--pmq-row-offset);
+  transform: translateX(-50%) rotate(var(--pmq-tilt));
+}
+
+.pmq__row--bottom {
+  bottom: var(--pmq-row-offset);
+  transform: translateX(-50%) rotate(calc(var(--pmq-tilt) * -1));
+}
+
+/* --- the moving track ---------------------------------------------------- */
+
+.pmq__track {
+  display: flex;
+  flex: 0 0 auto;            /* stops flexbox squashing the cards */
+  width: max-content;
+  animation: pmq-scroll var(--pmq-speed) linear infinite;
+  will-change: transform;
+}
+
+/* Second row travels the other way. */
+.pmq__row--bottom .pmq__track { animation-direction: reverse; }
+
+.pmq:hover .pmq__track { animation-play-state: running; }
+
+@keyframes pmq-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+/* --- cards --------------------------------------------------------------- */
+
+.pmq__card {
+  position: relative;
+  flex: 0 0 auto;
+  width: var(--pmq-card-w);
+  height: var(--pmq-card-h);
+  /* margin, not gap: the loop maths only lines up if the trailing space
+     after the last card matches the space between cards. */
+  margin: 0 var(--pmq-gap) 0 0;
+  border-radius: var(--pmq-radius);
+  overflow: hidden;
+  background: #e2e0da;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+  transform: translateZ(0);      /* keeps Safari clipping the radius cleanly */
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.pmq__card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.pmq__card:hover img { transform: scale(1.06); }
+
+/* --- name tag ------------------------------------------------------------ */
+
+.pmq__tag {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  max-width: calc(100% - 20px);
+  padding: 5px 10px;
+  border-radius: 12px;
+  font: 600 12px/1.25 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #16150f;
+  background: rgba(255, 255, 255, .88);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- responsive ---------------------------------------------------------- */
+
+@media (max-width: 700px) {
+  .pmq {
+    --pmq-card-w: 210px;
+    --pmq-card-h: 145px;
+    --pmq-gap: 14px;
+    --pmq-band-h: 520px;
+    --pmq-row-offset: 90px;
+    --pmq-radius: 14px;
+    --pmq-fade: 8%;
+  }
+}
+
+/* --- motion preferences -------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .pmq__track { animation: none; }
+  .pmq__card img { transition: none; }
+  .pmq__card:hover img { transform: none; }
+}
+.empty {
+  height: 50vh;
+}
