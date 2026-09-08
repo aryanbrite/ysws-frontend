@@ -62,7 +62,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 17%;
+    width: 1%;
     border-radius: 0px 0 0 30px;
     box-sizing: border-box;
 
@@ -145,6 +145,7 @@ header {
   font-size: 10vw;
   font-family: "MyFont", sans-serif;
   color: #FFF8ED;
+
 }
 
 @font-face {
