@@ -529,7 +529,6 @@ img {
   height: 300px;
   position: absolute;
   top: 25%;
-  left: 10vw;
 }
 
 #ump {
@@ -576,4 +575,18 @@ html::-webkit-scrollbar {
   position: absolute;
   top: 31vh;
   width: 85%;
+}
+
+[data-aos="leftright"]{
+  position: absolute;
+  top: 25%;
+  left: 0vw;
+  opacity: 0;
+}
+
+[data-aos="leftright"].aos-animate{
+  position: absolute;
+  top: 25%;
+  opacity: 1;
+  left: 10vw;
 }

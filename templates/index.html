@@ -6,6 +6,10 @@
       <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js" 
         integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
         crossorigin="anonymous"></script>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+/>
 {% endblock %}
 
 
@@ -171,9 +175,19 @@
 
 </section>
 <section class="empty">
-    <img id="lamp" src="https://cdn.hackclub.com/01a08055-e6d4-7bee-b76a-0c4c3e3eac97/Untitled%20design%20(32).png" alt="">
+    <img data-aos="leftright" data-aos-duration="500" id="lamp" src="https://cdn.hackclub.com/01a08055-e6d4-7bee-b76a-0c4c3e3eac97/Untitled%20design%20(32).png" alt="">
     
 </section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+  AOS.init();
+  AOS.init({
+    once: true
+});
+</script>
 {% endblock %}
 
 
