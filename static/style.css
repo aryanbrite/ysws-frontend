@@ -158,6 +158,11 @@ header {
     src: url("zarathustra-v01.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "outfit";
+    src: url("outfit.ttf") format("truetype");
+}
+
 #tex {
   position: absolute;
   top: 11vh;
@@ -605,7 +610,7 @@ html::-webkit-scrollbar {
   user-select: none;
 }
 .hours {
-  font-family: zara;
+  font-family: outfit;
   position: absolute;
   top: 5vh;
   font-size: 10vw;
