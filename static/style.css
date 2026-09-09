@@ -633,6 +633,8 @@ section {
     opacity: 0;
     transform: translateY(40px);
     animation: fadeUp 0.4s ease-out forwards;
+    animation-delay: 0.4s;
+
 }
 
 @keyframes fadeUp {
