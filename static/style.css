@@ -654,5 +654,5 @@ section {
     opacity: 0;
     transform: translateY(40px);
     animation: fadeUp 0.2s linear forwards;
-    animation-delay: 1.2s;
+    animation-delay: 0.9s;
 }
