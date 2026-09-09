@@ -196,7 +196,7 @@ body::selection {
 }
 
 /* White shadow */
-.signup1 {
+/* .signup1 {
     height: 20vh;
     width: 40vw;
     background-color: #FFF8ED;
@@ -206,7 +206,7 @@ body::selection {
     border-radius: 16px;
     z-index: 4;
     transition: 0.3s;
-}
+} */
 
 .signup3 {
     height: 19vh;
@@ -221,11 +221,11 @@ body::selection {
     pointer-events: none;
 }
 
-/* Hover yellow card -> move white shadow */
+/* Hover yellow card -> move white shadow
 .signup:hover + .signup1 {
     bottom: 18vh;
     left: 12vh;
-}
+} */
 #formsign {
   position: absolute;
   top: 40%;
