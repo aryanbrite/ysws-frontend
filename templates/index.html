@@ -23,7 +23,7 @@
     </a>
     </header>
     <section class="hero">
-        <img id="rail" draggable="false" src="https://cdn.hackclub.com/01a081d1-af8f-7785-a251-70fe9d20dc1e/Untitled%20design%20(40)%20(1).avif" alt="">
+        <img data-aos="fade-in" id="rail" draggable="false" src="https://cdn.hackclub.com/01a081d1-af8f-7785-a251-70fe9d20dc1e/Untitled%20design%20(40)%20(1).avif" alt="">
         <div id="tex" >
             <h1 id="text" >Cherry</h1>
             <h1 id="jan" >さくら</h1>
@@ -52,6 +52,11 @@
     <!-- Drop-in component. Only needs project-marquee.css.
      The second set of cards is an exact duplicate — it is what makes the
      loop seamless. If you add or remove a card, do it in BOTH sets. -->
+
+     <section data-aos="fade-in" class="ship">
+        <img draggable="false" class="ninja" src="https://cdn.hackclub.com/01a08471-0577-7000-b73e-50b2c104008d/Untitled%20design%20(42).avif" alt="">
+        <h1 data-aos="fade-in" class="hours" >50 Hours</h1>
+     </section>
 
 <section class="pmq" aria-label="Selected projects">
     <img draggable="false" id="ump" src="https://cdn.hackclub.com/01a0805b-17aa-73df-b208-762a1282e6af/Untitled%20design%20(33).png" alt="">
@@ -185,7 +190,7 @@
 <script>
   AOS.init();
   AOS.init({
-    once: true
+    once: false
 });
 </script>
 {% endblock %}

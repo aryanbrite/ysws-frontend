@@ -153,6 +153,10 @@ header {
     src: url("font.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "zara";
+    src: url("zarathustra-v01.otf") format("opentype");
+}
 
 #tex {
   position: absolute;
@@ -589,4 +593,24 @@ html::-webkit-scrollbar {
   top: 25%;
   opacity: 1;
   left: 10vw;
+}
+
+.ship {
+  height: 85vh;
+  position: relative;
+}
+
+.ninja {
+  width: 100vw ;
+  user-select: none;
+}
+.hours {
+  font-family: zara;
+  position: absolute;
+  top: 5vh;
+  font-size: 10vw;
+  left: 33vw;
+  transform: translateX(-45%);
+  color: #ec3750;
+
 }
