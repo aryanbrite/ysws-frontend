@@ -612,7 +612,7 @@ html::-webkit-scrollbar {
 .hours {
   font-family: outfit;
   position: absolute;
-  top: 5vh;
+  top: 2vh;
   font-size: 10vw;
   left: 33vw;
 
