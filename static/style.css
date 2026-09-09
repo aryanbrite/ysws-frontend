@@ -671,3 +671,25 @@ section {
 
   color: #ec3750;
 }
+
+.hourp1 {
+  font-family: outfit;
+  position: absolute;
+  top: 36vh;
+  font-size: 1.4vw;
+  left: 28vw;
+  right: 20vw;
+
+  color: #ec3750;
+}
+
+.hourp2 {
+  font-family: outfit;
+  position: absolute;
+  top: 41vh;
+  font-size: 1.4vw;
+  left: 28vw;
+  right: 20vw;
+
+  color: #ec3750;
+}
