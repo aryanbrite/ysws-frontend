@@ -64,7 +64,7 @@ body {
 header {
   z-index: 100;
     background-color: #ffb7c5;
-    height: 10vh;
+    height: 78px;
     position: absolute;
     top: 0;
     right: 0;
@@ -145,10 +145,10 @@ header {
 
 #text {
   position: absolute;
-  top: -10vh;
+  top: -36%;
   right: 0px;
   text-size-adjust: 20vw;
-  font-size: 10vw;
+  font-size: 140.8px;
   font-family: "MyFont", sans-serif;
   color: #FFF8ED;
 
@@ -171,17 +171,17 @@ header {
 
 #tex {
   position: absolute;
-  top: 11vh;
-  right: 16vw;
-  height: 30%;
-  width: 30vw;
+  top:11.5%;
+  right: 16%;
+  width: 500px;
+  height: 240px;
 }
 
 #flower {
-  width: 6vw;
+  width: 84.48px;
   position: absolute;
-  top: 7vh;
-  left: -3vw;
+  top: 23%;
+  left: 5%;
 }
 
 body::selection {
@@ -341,6 +341,7 @@ img {
 
 .hero {
   height: 100vh;
+  position: relative;
 }
 
 
@@ -386,8 +387,8 @@ img {
 
 #jan {
   position: absolute;
-  top: 17vh;
-  left: 0vw;
+  top: 55%;
+  left: 13%;
 }
 
 /* ==========================================================================
