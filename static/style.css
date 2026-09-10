@@ -2,7 +2,7 @@ body {
       background-color: #FFF8ED;
 
     background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px);
-    background-size: 4vw 4vw;
+    background-size: 56.32px 56.32px;
     }
     :root { color-scheme: light; }
     * { box-sizing: border-box; }
@@ -41,13 +41,13 @@ body {
     @keyframes fall {
       0% {
         opacity: 0;
-        transform: translate3d(var(--x0), -12vh, 0) rotateZ(var(--rz0)) rotateY(var(--ry0));
+        transform: translate3d(var(--x0), -95.16px, 0) rotateZ(var(--rz0)) rotateY(var(--ry0));
       }
       8% { opacity: var(--opacity); }
       82% { opacity: var(--opacity); }
       100% {
         opacity: 0;
-        transform: translate3d(var(--x1), 112vh, 0) rotateZ(var(--rz1)) rotateY(var(--ry1));
+        transform: translate3d(var(--x1), 888.16px, 0) rotateZ(var(--rz1)) rotateY(var(--ry1));
       }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -58,7 +58,7 @@ body {
 header {
   z-index: 100;
     background-color: #ffb7c5;
-    height: 10vh;
+    height: 79.3px;
     position: absolute;
     top: 0;
     right: 0;
@@ -97,7 +97,7 @@ header {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 35vw;
+    width: 492.8px;
     transition: 0.7s;
     pointer-events: visiblePainted;
     animation: treeani 1.8s;
@@ -114,20 +114,20 @@ header {
     top: 0px;
     left: 0px;
     transition: 0.7s;
-    width: 60vw;
+    width: 844.8px;
     animation: tree2ani 2s;
 }
 
 
 @keyframes tree2ani {
   from {
-    top: -30vh;
-    left: -30vw;
+    top: -237.9px;
+    left: -422.4px;
   }
 }
 @keyframes treeani {
   from {
-    right: -30vw;
+    right: -422.4px;
   }
 }
 
@@ -139,10 +139,10 @@ header {
 
 #text {
   position: absolute;
-  top: -10vh;
+  top: -79.3px;
   right: 0px;
-  text-size-adjust: 20vw;
-  font-size: 10vw;
+  text-size-adjust: 281.6px;
+  font-size: 140.8px;
   font-family: "MyFont", sans-serif;
   color: #FFF8ED;
 
@@ -165,17 +165,17 @@ header {
 
 #tex {
   position: absolute;
-  top: 11vh;
-  right: 16vw;
+  top: 87.23px;
+  right: 225.28px;
   height: 30%;
-  width: 30vw;
+  width: 422.4px;
 }
 
 #flower {
-  width: 6vw;
+  width: 84.48px;
   position: absolute;
-  top: 7vh;
-  left: -3vw;
+  top: 55.51px;
+  left: -42.24px;
 }
 
 body::selection {
@@ -185,35 +185,35 @@ body::selection {
 
 
 .signup {
-    height: 20vh;
-    width: 40vw;
+    height: 158.6px;
+    width: 563.2px;
     background-color: #ec3750;
     position: absolute;
-    bottom: 20vh;
-    left: 10vh;
+    bottom: 158.6px;
+    left: 79.3px;
     border-radius: 16px;
     z-index: 5;
 }
 
 /* White shadow */
 /* .signup1 {
-    height: 20vh;
-    width: 40vw;
+    height: 158.6px;
+    width: 563.2px;
     background-color: #FFF8ED;
     position: absolute;
-    bottom: 18vh;
-    left: 11vh;
+    bottom: 142.74px;
+    left: 87.23px;
     border-radius: 16px;
     z-index: 4;
     transition: 0.3s;
 } */
 
 .signup3 {
-    height: 19vh;
-    width: 39vw;
+    height: 150.67px;
+    width: 549.12px;
     position: absolute;
-    bottom: 20.5vh;
-    left: 11vh;
+    bottom: 162.565px;
+    left: 87.23px;
     border: 2px solid #FFF8ED;
     border-radius: 16px;
     z-index: 10;
@@ -223,8 +223,8 @@ body::selection {
 
 /* Hover yellow card -> move white shadow
 .signup:hover + .signup1 {
-    bottom: 18vh;
-    left: 12vh;
+    bottom: 142.74px;
+    left: 95.16px;
 } */
 #formsign {
   position: absolute;
@@ -290,8 +290,8 @@ input[type="email"]::placeholder {
 
 #weare {
   position: absolute;
-  bottom: 6vh;
-  left: 8vw;
+  bottom: 47.58px;
+  left: 112.64px;
   font-size: large;
   color: black;
 }
@@ -334,16 +334,16 @@ img {
 }
 
 .hero {
-  height: 100vh;
+  height: 793px;
 }
 
 
 .logo {
     position: fixed;
-    top: 1vh;
-    right: 2vw;
+    top: 7.93px;
+    right: 28.16px;
 
-    width: 12vw;
+    width: 168.96px;
     height: auto;
 
     display: block;
@@ -379,8 +379,8 @@ img {
 
 #jan {
   position: absolute;
-  top: 17vh;
-  left: 0vw;
+  top: 134.81px;
+  left: 0px;
 }
 
 /* ==========================================================================
@@ -530,7 +530,7 @@ img {
   .pmq__card:hover img { transform: none; }
 }
 .empty {
-  height: 90vh;
+  height: 713.7px;
   position: relative;
 }
 
@@ -541,7 +541,7 @@ img {
 }
 
 #ump {
-  width: 30vw ;
+  width: 422.4px ;
   position: absolute;
   top: 50%;
   right: 0px;
@@ -582,14 +582,14 @@ html::-webkit-scrollbar {
 
 #rail {
   position: absolute;
-  top: 38vh;
+  top: 301.34px;
   width: 85%;
 }
 
 [data-aos="leftright"]{
   position: absolute;
   top: 25%;
-  left: 0vw;
+  left: 0px;
   opacity: 0;
 }
 
@@ -597,24 +597,24 @@ html::-webkit-scrollbar {
   position: absolute;
   top: 25%;
   opacity: 1;
-  left: 10vw;
+  left: 140.8px;
 }
 
 .ship {
-  height: 85vh;
+  height: 674.05px;
   position: relative;
 }
 
 .ninja {
-  width: 100vw ;
+  width: 1408px ;
   user-select: none;
 }
 .hours {
   font-family: outfit;
   position: absolute;
-  top: 2vh;
-  font-size: 10vw;
-  left: 33vw;
+  top: 15.86px;
+  font-size: 140.8px;
+  left: 464.64px;
 
   color: #ec3750;
 
@@ -626,8 +626,8 @@ section {
 
 #rail2 {
   position: absolute;
-  top: 95vh;
-  right: -20vh;
+  top: 753.35px;
+  right: -158.6px;
   width: 85%;
   transform: rotate(45deg);
   z-index: -1;
@@ -664,10 +664,10 @@ section {
 .hourp {
   font-family: outfit;
   position: absolute;
-  top: 34vh;
-  font-size: 1.4vw;
-  left: 28vw;
-  right: 20vw;
+  top: 269.62px;
+  font-size: 19.712px;
+  left: 394.24px;
+  right: 281.6px;
 
   color: #ec3750;
 }
@@ -675,10 +675,10 @@ section {
 .hourp1 {
   font-family: outfit;
   position: absolute;
-  top: 36vh;
-  font-size: 1.4vw;
-  left: 28vw;
-  right: 20vw;
+  top: 285.48px;
+  font-size: 19.712px;
+  left: 394.24px;
+  right: 281.6px;
 
   color: #ec3750;
 }
@@ -686,10 +686,16 @@ section {
 .hourp2 {
   font-family: outfit;
   position: absolute;
-  top: 41vh;
-  font-size: 1.4vw;
-  left: 28vw;
-  right: 20vw;
+  top: 325.13px;
+  font-size: 19.712px;
+  left: 394.24px;
+  right: 281.6px;
 
   color: #ec3750;
+}
+
+#site {
+  width: 1408px;
+  position: relative;
+  transform-origin: top left;
 }
