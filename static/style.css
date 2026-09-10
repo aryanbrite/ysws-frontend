@@ -694,8 +694,15 @@ section {
   color: #ec3750;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 #site {
-  width: 1408px;
-  position: relative;
-  transform-origin: top left;
+    width: 1408px;
+    position: relative;
+    transform-origin: top left;
 }

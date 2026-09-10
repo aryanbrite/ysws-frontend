@@ -181,7 +181,7 @@
     once: true
 });
 
-  const site = document.getElementById("site");
+const site = document.getElementById("site");
 
 const DESIGN_WIDTH = 1408;
 const DESIGN_HEIGHT = 793;
@@ -193,6 +193,15 @@ function resizeSite() {
     const scale = Math.min(scaleX, scaleY);
 
     site.style.transform = `scale(${scale})`;
+
+    // Center horizontally
+    const scaledWidth = DESIGN_WIDTH * scale;
+    const offsetX = (window.innerWidth - scaledWidth) / 2;
+
+    site.style.marginLeft = `${offsetX}px`;
+
+    // Keep scrolling height correct
+    document.body.style.height = `${site.scrollHeight * scale}px`;
 }
 
 window.addEventListener("resize", resizeSite);
