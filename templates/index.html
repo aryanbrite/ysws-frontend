@@ -189,10 +189,12 @@ const DESIGN_HEIGHT = 793;
 function resizeSite() {
     const scaleX = window.innerWidth / DESIGN_WIDTH;
     const scaleY = window.innerHeight / DESIGN_HEIGHT;
-
     const scale = Math.min(scaleX, scaleY);
 
-    site.style.transform = `scale(${scale})`;
+    // center horizontally when the screen is wider than the design ratio
+    const offsetX = (window.innerWidth - DESIGN_WIDTH * scale) / 2;
+
+    site.style.transform = `translateX(${offsetX}px) scale(${scale})`;
 }
 
 window.addEventListener("resize", resizeSite);
