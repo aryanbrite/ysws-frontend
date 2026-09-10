@@ -590,7 +590,7 @@ html::-webkit-scrollbar {
 
 #rail {
   position: absolute;
-  top: 38vh;
+  top: 38%;
   width: 85%;
 }
 
@@ -700,4 +700,24 @@ section {
   right: 20vw;
 
   color: #ec3750;
+}
+
+
+@media (max-height: 972px) {
+    .signup {
+    height: 158.6px;
+    width: 563.2px;
+    bottom: 13%;
+    }
+
+.signup3 {
+    height: 150.67px;
+    width: 549.12px;
+    bottom: 13.5%;
+}
+#weare {
+  position: absolute;
+  bottom: 4%;
+}
+
 }
