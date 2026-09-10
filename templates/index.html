@@ -199,10 +199,12 @@ Everything (including flights, food and accommodation) is totally free for teena
 
 
 <script>
-  AOS.init();
-  AOS.init({
-    once: true
-});
+  window.addEventListener('load', function () {
+    AOS.init({
+      once: true
+    });
+    AOS.refreshHard();
+  });
 </script>
 {% endblock %}
 

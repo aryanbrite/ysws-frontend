@@ -14,7 +14,7 @@
     <style>
     @font-face {
     font-family: "MyFont";
-    src: url("font.ttf") format("truetype");
+    src: url("{{ url_for('static', filename='font.ttf') }}") format("truetype");
 }
     text,p,h1,h2,h3,button,input[type="email"]::placeholder {
   font-family: "MyFont", sans-serif;
@@ -27,7 +27,6 @@
 
     {% include '_footer.html' %}
 
-    <script src="{{ url_for('static', filename='footer.js') }}"></script>
     {% block scripts %}{% endblock %}
 </body>
 </html>
