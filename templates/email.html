@@ -5,21 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hack Club - Cherry</title>
 
-    <link rel="stylesheet" href=" {{ url_for('static', filename='email.css') }} ">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 202, 212);
+        }
+
+        .email-container{
+            width: 80%;
+            background-color: white;
+            border: 2.5px solid black;
+            border-radius: 20px;
+            padding: 5%;
+            box-sizing: border-box;
+
+            position: absolute;
+            top: 7%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            z-index: 10;
+        }
+
+        .shadow{
+            width: 80%;
+            background-color: black;
+            border: 2.5px solid black;
+            border-radius: 20px;
+            padding: 5%;
+            box-sizing: border-box;
+
+            position: absolute;
+            top: calc(7% + 7px);
+            left: calc(50% + 7px);
+            transform: translateX(-50%);
+
+            color: black;
+        }
+
+    </style>
 </head>
-<body>
-    <p>Hey {{name}}! Pranjal here, Welcome to CHERRY!!! <br> <br>
-    You just signed up for Cherry so let me give you a brief intro about it and tell you what comes next! <br>
-    Cherry is a You Ship, We Serve (YSWS) Program by Hack Club where if you code or lapse, and ship 50 hours of projects, you'll be invited to Tokyo, Japan for a 5 day hackathon with a bunch of other Hack Clubbers! <br> <br> 
-    {% if session.get("user")["verification_status"] != "verified" %}
-        <strong>I can see that you have not verified your age right now but no problems! Here's the [link] to the verification page. <br>
-        You must be 18 years old or younger in order to participate (it's for high school students).</strong> <br> <br>
-    {% endif %}
-    We have no cap on participation. If you ship 50 hours worth of projects, you are guaranteed to have a spot. Accommodation and food will be totally covered by us. 
-    You can also buy your flight stipends from the Event Shop in exchange for more hours! <br> <br>
-    Your next step is to build your first project. [Click here] for the complete guide! <br> <br>
-    By the way, you've received an invite to our [community on Slack] - join it and say Hi to other high school hackers heading Cherry and lock in together! <br> <br>
-    Feel free to reply to this email for any questions you have. I am reading them all! <br>
-    ~Pranjal</p>
+<body style="margin: 0; padding: 0; background-color: rgb(255, 202, 212);">
+
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" style="padding: 30px 0;">
+            <div style="width: 560px;">
+                <div class="email-container" style="
+                background-color: #FFF8ED;
+                border-top: 2px solid #1a1a1a;
+                border-left: 2px solid #1a1a1a;
+                border-right: 6px solid #1a1a1a;
+                border-bottom: 6px solid #1a1a1a;
+                border-radius: 32px;
+                text-align: left;
+                padding: 0;">
+                    <div style="padding: 28px 24px 1px;">
+                        <p>Hey {{name}}!<br> Pranjal here, Welcome to CHERRY!!! <br> <br>
+                        You just signed up for Cherry so let me give you a brief intro about it and tell you what comes next! <br>
+                        Cherry is a You Ship, We Serve (YSWS) Program by Hack Club where if you code or lapse, and ship 50 hours of projects, you'll be invited to Tokyo, Japan for a 5 day hackathon with a bunch of other Hack Clubbers! <br> <br>
+                        {% if session.get("user")["verification_status"] != "verified" %}
+                            <strong>I can see that you have not verified your age right now but no problems! Here's the <a href="">link</a> to the verification page. <br>
+                            You must be 18 years old or younger in order to participate (it's for high school students).</strong> <br> <br>
+                        {% endif %}
+                        We have no cap on participation. If you ship 50 hours worth of projects, you are guaranteed to have a spot. Accommodation and food will be totally covered by us.
+                        You can also buy your flight stipends from the Event Shop in exchange for more hours! <br> <br>
+                        Your next step is to build your first project. <a href="">Click here</a> for the complete guide! <br> <br>
+                        By the way, you've received an invite to our <a href="">community on Slack</a> - join it and say Hi to other high school hackers heading Cherry and lock in together! <br> <br>
+                        Feel free to reply to this email for any questions you have. I am reading them all! <br> <br>
+                        ~Pranjal</p>
+                    </div>
+
+                    <div style="background-color: #1a1a1a; margin-bottom: 30px;">
+                        <p style="color: white; text-align: center; padding-top: 2px; padding-bottom: 2px;">Hack Club is Registered under The Hack Foundation, a 501(c)(3) nonprofit (EIN: 81-2908499).</p>
+                    </div>
+                </div>
+
+                 <p style="color: rgb(12, 6, 6); text-align: center; z-index: 1100;">You're receiving this email because you signed up for Hack Club Cherry. <br> <a href="">Unsubscribe</a></p>
+            </div>
+
+             <p style="color: rgb(4, 2, 2); text-align: center; z-index: 1100;">You're receiving this email because you signed up for Hack Club Cherry. <br> <a href="">Unsubscribe</a></p>
+            </td>
+        </tr>
+    </table>
+
+    <p style="color: rgb(9, 4, 4); text-align: center; z-index: 1100;">You're receiving this email because you signed up for Hack Club Cherry. <br> <a href="">Unsubscribe</a></p>
+
+    
+
 </body>
 </html>
