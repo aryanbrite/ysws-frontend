@@ -120,7 +120,7 @@ header {
     top: 0px;
     left: 0px;
     transition: 0.7s;
-    width: 60vw;
+    height: 60vh;
     animation: tree2ani 2s;
 }
 
