@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 202, 212);
+    background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px);
+    background-size: 8vw 8vw;
+}
+
+.email-container{
+    width: 80%;
+    margin: 5% auto;
+    background-color: white;
+    border: 0.2vw solid #222;
+    border-radius: 2vw;
+    padding: 5%;
+    box-sizing: border-box;
+
+    box-shadow: 0.6vw 0.6vw 0 #222;
+}
+
+@media (min-width: 850px) {
+    body{
+        background-size: 4vw 4vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .email-container{
+        border: 0.3vw solid #222;
+        border-radius: 3vw;
+        box-shadow: 0.7vw 0.7vw 0 #222;
+    }
+}
+
+@media (max-width: 533px) {
+    .email-container{
+        border: 0.5vw solid #222;
+        border-radius: 5vw;
+        box-shadow: 0.9vw 0.9vw 0 #222;
+    }
+}
