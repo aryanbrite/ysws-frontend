@@ -191,12 +191,12 @@ body::selection {
 
 
 .signup {
-    height: 20vh;
-    width: 40vw;
+    height: 158.6px;
+    width: 563.2px;
     background-color: #ec3750;
     position: absolute;
-    bottom: 20vh;
-    left: 10vh;
+    bottom: 20%;
+    left: 5.7%;
     border-radius: 16px;
     z-index: 5;
 }
@@ -215,11 +215,11 @@ body::selection {
 } */
 
 .signup3 {
-    height: 19vh;
-    width: 39vw;
+    height: 150.67px;
+    width: 549.12px;
     position: absolute;
-    bottom: 20.5vh;
-    left: 11vh;
+    bottom: 20.5%;
+    left: calc(5.7% + 7px );
     border: 2px solid #FFF8ED;
     border-radius: 16px;
     z-index: 10;
