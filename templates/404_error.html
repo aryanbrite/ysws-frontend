@@ -2,9 +2,8 @@
 {# #yaha base.html use hora hai ok #}
 
 {% block head %}        
-{# #base.html me title aur favicon walera already fixed hai to agar header use karna ho css ya js connect karna ke liye to yaha karna #}
-
-
+{# #base.html me title aur favicon wagera already fixed hai to agar header use karna ho css ya js connect karna ke liye to yaha karna #}
+<link rel="stylesheet" href=" {{ url_for('static', filename='error.css') }} ">
 {% endblock %}
 
 
@@ -13,18 +12,10 @@
 {% block content %}     
 {# #isko tu body man le direct body ka code yaha likhio koi emmit ebrivation ki need ni #}
 
-<p>404 error</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="hero" style="height: 100vh;">
+    <img src="https://cdn.hackclub.com/01a09e63-1b57-72d5-b31b-396d34a4347c/error_page.png" alt="">
+    <p>Oops!<br>This page doesn't exist...</p>
+</div>
 
 
 
